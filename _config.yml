@@ -4,8 +4,8 @@
 permalink:           pretty
 
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
+title:               Machine Learning Breakdown
+tagline:             'Looking for an intuitive understanding'
 description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
 url:                 http://NickDGreg.github.io/NickDGreg.github.io
 baseurl:             ''
@@ -13,9 +13,9 @@ paginate:            5
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Nick Gregory
+  url:               https://twitter.com/NickDGreg
+  email:             NickDGreg@gmail.com
 
 # Custom vars
 version:             1.0.0
