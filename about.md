@@ -4,7 +4,7 @@ title: About
 ---
 
 <p class="message">
-  Hey! I'm Nick. I created this site because maths and machine learning can be a struggle. I share resources and explanations to make it a little more intuitive.  
+  Hey! I created this site because maths and machine learning can be a struggle. I share resources and explanations that have made it a little more intuitive for me.  
 </p>
 
 ## Website
