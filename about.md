@@ -4,7 +4,7 @@ title: About
 ---
 
 <p class="message">
-  Hey! I created this site because maths and machine learning can be a struggle. I share resources and explanations that have made it a little more intuitive for me.  
+  Hey! I created this site because I had ambitions. Those ambitions didn't survive next to the work required by my MSc. degree.   
 </p>
 
 ## Website
