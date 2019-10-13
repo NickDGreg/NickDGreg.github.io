@@ -15,8 +15,8 @@ paginate:            5
 # About/contact
 author:
   name:              Nick Gregory
-  url:               https://twitter.com/NickDGreg
-  email:             NickDGreg@gmail.com
+  url:               
+  email:             
 
 # Custom vars
 version:             1.0.0
