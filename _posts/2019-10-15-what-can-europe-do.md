@@ -38,9 +38,9 @@ We hardly look confident. These stats don’t show that the US is a place of def
  
 Is there anything we Europeans can do to drive the future? Are the joie de vivre of the mediteranian and the welfare of the nordic countries symptoms of having built our villa, of lacking the obsessiveness of Silicon Valley to “change the world” or the hunger of the Chinese to do whatever it is the Chinese want to do? 
 
-While I agree that we do not have enough desire to control our future, I do think valuing time outside of work, valuing caring for others, valuing access to healthcare and education are not signs of complacency but truly important things to value and more importantly, we really do act like we value them. 
+While I agree that we do not have enough desire to control our future, I do think valuing time outside of work, valuing caring for others, valuing access to healthcare and education are not signs of complacency but the right things to value. 
 
-Perhaps the definite optimists amongst us can work hard to create technology combined with European values? We may not turn global tide, but we have strong universities, a tightly packed group of cultures that can collaborate and compete, and I know I have the desire to build into our future and other young people do too.
+Perhaps the definite optimists amongst us can work hard to create technology combined with European values? We may not turn the global tide, but we have strong universities, a tightly packed group of cultures that can collaborate and compete, and I know I have the desire to build into our future and other young people do too.
 
 Plus lets not forget where we sit in the world. Asia and North Africa are right next to us. There are so many opportunities for us to build technologies operating outside of the EU comfort zone.
 
