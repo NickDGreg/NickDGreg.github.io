@@ -8,7 +8,9 @@ Two years ago I finished university; well developed into the typical ideological
 
 There were some organisations that were obviously valuable, but me joining them - was that valuable? What’s one more Googler? 
 
-Maybe startups have something to offer? But they didn’t look worthwhile to me. Another “AI” driven data analytics company helping You to Understand Your Customers, even if they claimed to be Building the World of Tomorrow… … Today, I was not inspired. 
+Maybe startups have something to offer? But they didn’t look worthwhile to me. Another “AI” driven data analytics company helping You to Understand Your Customers, even if they claimed to be Building the World of Tomorrow… Today. 
+
+I was not inspired. 
 
 I took a job where I thought I would learn the most. I tried not to stress about the output. 
 
