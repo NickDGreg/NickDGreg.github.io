@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What can Europe do?"
-date: 2019-10-15
+date: 2019-10-13
 ---
 
 Has Europe built its villa and retired?
