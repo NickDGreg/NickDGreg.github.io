@@ -356,6 +356,10 @@ a.sidebar-nav-item:focus {
   color: inherit;
 }
 
+/* Images */
+img + em { 
+  font-size: 75%;
+}
 
 /*
  * Pagination
