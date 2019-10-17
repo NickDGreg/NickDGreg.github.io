@@ -1,4 +1,4 @@
-I think climate change is the biggest threat to this planet that I can do something about. I expect to live out my life without being heavily impacted by it, but I still care. David Attenborough is my hero. I love nature want it all to continue existing. I love life and want future people to be able to love it too.
+I think climate change is the biggest threat to this planet that I can do something about. I expect to live out my life without being heavily impacted by it, but I still care. David Attenborough is my hero. I love nature and want it all to continue existing. I love life and want future people to be able to love it too.
 
 To decide what to do about it I want to know the areas I can have the greatest impact. The climate science researchers saying that our progress isn't nearly fast convinces me that intense focus where it matters most is what is needed. To find which areas I can maximise my impact in I've tried to find granular information on which subsectors contribute most to climate change and it turns out it isn't easy to find.
 
