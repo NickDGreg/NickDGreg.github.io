@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Is what I do anything at all?"
+date: "2019-10-10"
+---
+
 Am I irrelevant to what I value? I believe so.
 
 Two years ago I finished university; well developed into the typical ideological young person. Strong opinions about how the world should be better. How the problems, the real problems need to be worked on, not these frivolous BS activities that are so utterly pointless but mysteriously well rewarded. I began job searching.
