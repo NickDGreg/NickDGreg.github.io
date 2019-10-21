@@ -7,11 +7,11 @@ const getMillisThisYear = () => Date.now() - yearStartMillis;
 const updateCo2 = () => {
     const millisThisYear = getMillisThisYear();
     document.getElementById("co2").innerHTML = ( millisThisYear * co2PerMillisecond ).toFixed(2);
-    setTimeout(updateCo2, 5);
+    setTimeout(updateCo2, 1000);
 }
 const updateNitrogen = () => {
     document.getElementById("nitrogen").innerHTML = Date.now();
-    setTimeout(updateNitrogen, 50);
+    setTimeout(updateNitrogen, 1000);
 }
 
 updateCo2();
