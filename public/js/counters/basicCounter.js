@@ -1,4 +1,4 @@
-const totalCo2 = 53526302800 // https://data.worldbank.org/indicator/EN.ATM.GHGT.KT.CE
+const totalCo2 = 35526302800 // https://data.worldbank.org/indicator/EN.ATM.GHGT.KT.CE
 const co2PerMillisecond = totalCo2 / (365 * 24 * 60 * 60 * 1000);
 const yearStartMillis = new Date(new Date().getFullYear(), 0).getTime();
 
