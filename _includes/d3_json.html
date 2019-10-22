@@ -3,8 +3,12 @@
 <script>
     console.log('load');
 d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
+    var margin = {top: 10, right: 10, bottom: 10, left: 10},
+  width = 600 - margin.left - margin.right,
+  height = 600 - margin.top - margin.bottom;
+    
     const treemap = d3.treemap()
-    .size([500,500])
+    .size([width,height])
     .paddingOuter(5);
     var root = d3.hierarchy(data);
     console.log(root.leaves());
@@ -14,7 +18,11 @@ d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
     var color = d3.scaleOrdinal(d3.schemeCategory10);
     var opacity = d3.scaleLinear();
 
-    var chart = d3.select(".chart").attr("width", 1000).attr("height", 1000);
+    var chart = d3.select(".chart").attr("width",  width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+  .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
     var square = chart.selectAll("rect")
     .data(root.leaves())
     .enter()
@@ -23,11 +31,11 @@ d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
     .attr('y', d => d.y0)
     .attr('width', d => d.x1 - d.x0)
     .attr('height', d => d.y1 - d.y0)
-    .style('fill', d => color(d.parent.data.name))
+    .style('fill', d => color(d.parent.parent.data.name))
     // .style('opacity', d => opacity(d.data.value))
 
   chart
-    .selectAll("titles")
+    .selectAll("GHG")
     .data(root.descendants().filter(function(d){return d.depth==1}))
     .enter()
     .append("text")
@@ -37,14 +45,16 @@ d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
       .attr("font-size", "11px")
       .attr("fill",  function(d){ return color(d.data.name)} )
 
-  // Add title for the 3 groups
-  svg
-    .append("text")
-      .attr("x", 0)
-      .attr("y", 14)    // +20 to adjust position (lower)
-      .text("Three group leaders and 14 employees")
-      .attr("font-size", "19px")
-      .attr("fill",  "grey" )
+    //   chart
+    // .selectAll("industry")
+    // .data(root.descendants().filter(function(d){return d.depth==2}))
+    // .enter()
+    // .append("text")
+    //   .attr("x", function(d){ return d.x0})
+    //   .attr("y", function(d){ return d.y0})
+    //   .text(function(d){ return d.data.name })
+    //   .attr("font-size", "11px")
+    //   .attr("fill",  function(d){ return color(d.data.name)} )
     // chart.selectAll("text")
     // .data(root.leaves())
     // .enter()
