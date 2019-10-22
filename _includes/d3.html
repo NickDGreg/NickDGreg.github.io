@@ -22,15 +22,24 @@
             "translate(" + margin.left + "," + margin.top + ")");
     
     // Read data
-    d3.csv('../../../../public/data/tree_example.csv', function(data) {
+    d3.csv('../../../../public/data/uk_emissions_simple.csv', function(data) {
     
-      // stratify the data: reformatting for d3.js
-      var root = d3.stratify()
-        .id(function(d) { return d.name; })   // Name of the entity (column name is name in csv)
-        .parentId(function(d) { return d.parent; })   // Name of the parent (column name is parent in csv)
-        (data);
-      root.sum(function(d) { return +d.value })   // Compute the numeric value for each entity
+    var format = d3.format(",d"),
+    color = d3.scaleOrdinal(d3.schemeCategory10);
+
+    var nest = d3.nest()
+        .key(function(d) {return d.parent;})
+        .key(function(d) {return d.child;})
+        .rollup(function(d) {return d3.sum(d, function(d) {return d.value;}); });
+
     
+    data.forEach(function(d) {
+        if (d.parent == "null") { d.parent = null};
+    });
+
+    var root = d3.hierarchy({values: nest.entries(data)}, function(d) { return d.values; })
+        .sum(function(d) { return d.value; })
+        .sort(function(a, b) { return b.value - a.value; });
       // Then d3.treemap computes the position of each element of the hierarchy
       // The coordinates are added to the root object above
       d3.treemap()
@@ -50,7 +59,7 @@
           .attr('width', function (d) { return d.x1 - d.x0; })
           .attr('height', function (d) { return d.y1 - d.y0; })
           .style("stroke", "black")
-          .style("fill", "#69b3a2");
+          .style("fill", function(d) { while (d.depth > 1 ) d = d.parent; return color(d.data.key)});
     
       // and to add the text labels
       svg
