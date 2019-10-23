@@ -1,5 +1,5 @@
 <script src="https://d3js.org/d3.v5.js"></script>
-<svg class="chart"></svg>
+<div id="chart_div"><svg class="chart"></svg></div>
 <script>
     console.log('load');
 d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
@@ -23,6 +23,43 @@ d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
     .append("g")
   .attr("transform",
         "translate(" + margin.left + "," + margin.top + ")");
+
+
+      // create a tooltip
+  var Tooltip = d3.select("#chart_div")
+    .append("div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "2px")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
+
+// Three function that change the tooltip when user hover / move / leave a cell
+var mouseover = function(d) {
+    Tooltip
+      .style("opacity", 1)
+    d3.select(this)
+      .style("stroke", "black")
+      .style("opacity", 1)
+  }
+  var mousemove = function(d) {
+    console.log(`move: ${d.value}`)
+    Tooltip
+      .html("The exact value of<br>this cell is: " + d.value)
+      .style("left", (d3.mouse(this)[0]+70) + "px")
+      .style("top", (d3.mouse(this)[1]) + "px")
+  }
+  var mouseleave = function(d) {
+    Tooltip
+      .style("opacity", 0)
+    d3.select(this)
+      .style("stroke", "none")
+      .style("opacity", 0.8)
+  }
+
+
     var square = chart.selectAll("rect")
     .data(root.leaves())
     .enter()
@@ -32,6 +69,9 @@ d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
     .attr('width', d => d.x1 - d.x0)
     .attr('height', d => d.y1 - d.y0)
     .style('fill', d => color(d.parent.parent.data.name))
+    .on("mouseover", mouseover)
+    .on("mousemove", mousemove)
+    .on("mouseleave", mouseleave)
     // .style('opacity', d => opacity(d.data.value))
 
   chart
@@ -44,8 +84,9 @@ d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
       .text(function(d){ return d.data.name })
       .attr("font-size", "11px")
       .attr("fill",  function(d){ return color(d.data.name)} )
+      
 
-    //   chart
+      //   chart
     // .selectAll("industry")
     // .data(root.descendants().filter(function(d){return d.depth==2}))
     // .enter()
