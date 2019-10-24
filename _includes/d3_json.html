@@ -16,6 +16,8 @@ d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
     root.sum(d => d.value);
     treemap(root);
 
+    // console.log(root.leaves().reduce)
+
     var color = d3.scaleOrdinal(d3.schemeCategory10);
     var opacity = d3.scaleLinear();
 
