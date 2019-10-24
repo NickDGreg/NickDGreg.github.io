@@ -1,7 +1,6 @@
 <script src="https://d3js.org/d3.v5.js"></script>
 <div id="chart_div"><svg class="chart"></svg></div>
 <script>
-    console.log('load');
 d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
     var margin = {top: 10, right: 10, bottom: 10, left: 10},
   width = 600 - margin.left - margin.right,
@@ -11,7 +10,6 @@ d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
     .size([width,height])
     .paddingOuter(5);
     var root = d3.hierarchy(data);
-    console.log(root.leaves());
     root.sum(d => d.value);
     treemap(root);
 
@@ -104,5 +102,4 @@ var mouseover = function(d) {
     //   .attr("fill", "white")
 
 });
-console.log('after json');
      </script>
