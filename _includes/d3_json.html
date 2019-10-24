@@ -72,16 +72,16 @@ var mouseover = function(d) {
     .on("mouseleave", mouseleave)
     // .style('opacity', d => opacity(d.data.value))
 
-  chart
-    .selectAll("GHG")
-    .data(root.descendants().filter(function(d){return d.depth==1}))
-    .enter()
-    .append("text")
-      .attr("x", function(d){ return d.x0})
-      .attr("y", function(d){ return d.y0})
-      .text(function(d){ return d.data.name })
-      .attr("font-size", "11px")
-      .attr("fill",  function(d){ return color(d.data.name)} )
+    // chart
+    //   .selectAll("GHG")
+    //   .data(root.descendants().filter(function(d){return d.depth==1}))
+    //   .enter()
+    //   .append("text")
+    //     .attr("x", function(d){ return d.x0})
+    //     .attr("y", function(d){ return d.y0})
+    //     .text(function(d){ return d.data.name })
+    //     .attr("font-size", "11px")
+    //     .attr("fill",  function(d){ return color(d.data.name)} )
       
       legend = d3.select('#legend_svg')
       var size = 20;
