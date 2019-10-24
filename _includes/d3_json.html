@@ -1,5 +1,8 @@
 <script src="https://d3js.org/d3.v5.js"></script>
 <div id="chart_div"><svg class="chart"></svg></div>
+<div>
+  <svg id="legend_svg" height=300 width=450></svg>
+</div>
 <script>
 d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
     var margin = {top: 10, right: 10, bottom: 10, left: 10},
@@ -8,7 +11,7 @@ d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
     
     const treemap = d3.treemap()
     .size([width,height])
-    .paddingOuter(5);
+    .paddingOuter(0);
     var root = d3.hierarchy(data);
     root.sum(d => d.value);
     treemap(root);
@@ -80,7 +83,29 @@ var mouseover = function(d) {
       .attr("font-size", "11px")
       .attr("fill",  function(d){ return color(d.data.name)} )
       
+      legend = d3.select('#legend_svg')
+      var size = 20;
+legend.selectAll("mydots")
+  .data(root.descendants().filter(function(d){return d.depth==1}))
+  .enter()
+  .append("rect")
+    .attr("x", 100)
+    .attr("y", function(d,i){ return 100 + i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr("width", size)
+    .attr("height", size)
+    .style("fill", function(d){ return color(d.data.name)})
 
+// Add one dot in the legend for each name.
+legend.selectAll("mylabels")
+  .data(root.descendants().filter(function(d){return d.depth==1}))
+  .enter()
+  .append("text")
+    .attr("x", 100 + size*1.2)
+    .attr("y", function(d,i){ return 100 + i*(size+5) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .style("fill", function(d){ return color(d.data.name)})
+    .text(function(d){ return d.data.name})
+    .attr("text-anchor", "left")
+    .style("alignment-baseline", "middle") 
       //   chart
     // .selectAll("industry")
     // .data(root.descendants().filter(function(d){return d.depth==2}))
