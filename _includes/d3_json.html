@@ -14,8 +14,6 @@ d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
   var margin = {top: 10, right: 10, bottom: 10, left: 10},
   width = treemapWidth - margin.left - margin.right;
   height = treemapWidth - margin.top - margin.bottom;
-  console.log(width, height);
-  
     
     const treemap = d3.treemap()
     .size([treemapWidth,treemapContainer.offsetHeight])
@@ -31,8 +29,6 @@ d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
         return acc;
       }
     }, 0);
-    console.log(`total emissions: ${totalEmissions}`);
-    
 
     var color = d3.scaleOrdinal(d3.schemeCategory10);
     var opacity = d3.scaleLinear();
@@ -86,18 +82,6 @@ var mouseover = function(d) {
     .on("mouseover", mouseover)
     .on("mousemove", mousemove)
     .on("mouseleave", mouseleave)
-    // .style('opacity', d => opacity(d.data.value))
-
-    // chart
-    //   .selectAll("GHG")
-    //   .data(root.descendants().filter(function(d){return d.depth==1}))
-    //   .enter()
-    //   .append("text")
-    //     .attr("x", function(d){ return d.x0})
-    //     .attr("y", function(d){ return d.y0})
-    //     .text(function(d){ return d.data.name })
-    //     .attr("font-size", "11px")
-    //     .attr("fill",  function(d){ return color(d.data.name)} )
       
       legend = d3.select('.legend_svg')
       var size = 20;
@@ -122,25 +106,5 @@ legend.selectAll("mylabels")
     .text(function(d){ return d.data.name})
     .attr("text-anchor", "left")
     .style("alignment-baseline", "middle") 
-      //   chart
-    // .selectAll("industry")
-    // .data(root.descendants().filter(function(d){return d.depth==2}))
-    // .enter()
-    // .append("text")
-    //   .attr("x", function(d){ return d.x0})
-    //   .attr("y", function(d){ return d.y0})
-    //   .text(function(d){ return d.data.name })
-    //   .attr("font-size", "11px")
-    //   .attr("fill",  function(d){ return color(d.data.name)} )
-    // chart.selectAll("text")
-    // .data(root.leaves())
-    // .enter()
-    // .append("text")
-    // .attr("x", function(d){ return d.x0+1})    // +10 to adjust position (more right)
-    //   .attr("y", function(d){ return d.y0+1})    // +20 to adjust position (lower)
-    //   .text(function(d){ return d.data.name })
-    //   .attr("font-size", "3px")
-    //   .attr("fill", "white")
-
 });
      </script>
