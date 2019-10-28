@@ -9,7 +9,8 @@ d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
   const treemapContainer = document.getElementById("uk_emissions_treemap_container");
   const treemapWidth = Math.floor( treemapContainer.offsetWidth * .75 );
   const legendWidth = Math.floor( treemapContainer.offsetWidth * .15 );
-  
+  const containerHeight = treemapContainer.offsetHeight;
+
   var margin = {top: 10, right: 10, bottom: 10, left: 10},
   width = treemapWidth - margin.left - margin.right;
   height = treemapWidth - margin.top - margin.bottom;
@@ -104,8 +105,8 @@ legend.selectAll("mydots")
   .data(root.descendants().filter(function(d){return d.depth==1}))
   .enter()
   .append("rect")
-    .attr("x", 0)
-    .attr("y", function(d,i){ return i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr("x", margin.left)
+    .attr("y", function(d,i){ return margin.top + i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
     .attr("width", size)
     .attr("height", size)
     .style("fill", function(d){ return color(d.data.name)})
@@ -115,12 +116,12 @@ legend.selectAll("mylabels")
   .data(root.descendants().filter(function(d){return d.depth==1}))
   .enter()
   .append("text")
-    .attr("x", size*1.2)
-    .attr("y", function(d,i){ return i*(size+5) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr("x", margin.left + size*1.2)
+    .attr("y", function(d,i){ return margin.top + i*(size+5) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
     .style("fill", function(d){ return color(d.data.name)})
     .text(function(d){ return d.data.name})
     .attr("text-anchor", "left")
-    .style("alignment-baseline", "left") 
+    .style("alignment-baseline", "middle") 
       //   chart
     // .selectAll("industry")
     // .data(root.descendants().filter(function(d){return d.depth==2}))
