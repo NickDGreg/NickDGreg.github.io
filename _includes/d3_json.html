@@ -1,0 +1,110 @@
+<script src="https://d3js.org/d3.v5.js"></script>
+<div class="treemap_container" id="uk_emissions_treemap_container">
+  <svg class="treemap_chart" id="uk_emissions_treemap_chart"></svg>
+  <svg class="legend_svg" id="uk_emissions_legend"></svg>
+</div> 
+   <div id="tooltip_div"></div>
+<script>
+d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
+  const treemapContainer = document.getElementById("uk_emissions_treemap_container");
+  const treemapWidth = Math.floor( treemapContainer.offsetWidth * .75 );
+  const legendWidth = Math.floor( treemapContainer.offsetWidth * .15 );
+  const containerHeight = treemapContainer.offsetHeight;
+
+  var margin = {top: 10, right: 10, bottom: 10, left: 10},
+  width = treemapWidth - margin.left - margin.right;
+  height = treemapWidth - margin.top - margin.bottom;
+    
+    const treemap = d3.treemap()
+    .size([treemapWidth,treemapContainer.offsetHeight])
+    .paddingOuter(0);
+    var root = d3.hierarchy(data);
+    root.sum(d => d.value);
+    treemap(root);
+
+    const totalEmissions = root.leaves().reduce((acc, cur) => {
+      if (cur.data && cur.data.value) {
+        return parseFloat( cur.data.value ) + acc;
+      } else {
+        return acc;
+      }
+    }, 0);
+
+    var color = d3.scaleOrdinal(d3.schemeCategory10);
+    var opacity = d3.scaleLinear();
+
+    var chart = d3.select(".treemap_chart")
+    .append("g")
+  .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
+
+
+      // create a tooltip
+  var Tooltip = d3.select("#tooltip_div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "2px")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
+
+// Three function that change the tooltip when user hover / move / leave a cell
+var mouseover = function(d) {
+    Tooltip
+      .style("opacity", 1)
+    d3.select(this)
+      .style("stroke", "black")
+  }
+  var mousemove = function(d) {
+    Tooltip
+      .html( `${d.data.name}: ${d.value.toFixed(2)} (${((d.value/totalEmissions) * 100).toFixed(3)}%)`)
+      .style("left", (d3.mouse(this)[0]+70) + "px")
+      .style("top", (d3.mouse(this)[1]) + "px")
+  }
+  var mouseleave = function(d) {
+    Tooltip
+      .style("opacity", 0)
+    d3.select(this)
+      .style("stroke", "none")
+  }
+
+
+    var square = chart.selectAll("rect")
+    .data(root.leaves())
+    .enter()
+    .append('rect')
+    .attr('x', d => d.x0)
+    .attr('y', d => d.y0)
+    .attr('width', d => d.x1 - d.x0)
+    .attr('height', d => d.y1 - d.y0)
+    .style('fill', d => color(d.parent.parent.data.name))
+    .on("mouseover", mouseover)
+    .on("mousemove", mousemove)
+    .on("mouseleave", mouseleave)
+      
+      legend = d3.select('.legend_svg')
+      var size = 20;
+legend.selectAll("mydots")
+  .data(root.descendants().filter(function(d){return d.depth==1}))
+  .enter()
+  .append("rect")
+    .attr("x", margin.left)
+    .attr("y", function(d,i){ return margin.top + i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr("width", size)
+    .attr("height", size)
+    .style("fill", function(d){ return color(d.data.name)})
+
+// Add one dot in the legend for each name.
+legend.selectAll("mylabels")
+  .data(root.descendants().filter(function(d){return d.depth==1}))
+  .enter()
+  .append("text")
+    .attr("x", margin.left + size*1.2)
+    .attr("y", function(d,i){ return margin.top + i*(size+5) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .style("fill", function(d){ return color(d.data.name)})
+    .text(function(d){ return d.data.name})
+    .attr("text-anchor", "left")
+    .style("alignment-baseline", "middle") 
+});
+     </script>
