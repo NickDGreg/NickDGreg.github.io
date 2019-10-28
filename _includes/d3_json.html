@@ -16,7 +16,15 @@ d3.json('../../../../public/data/uk_emissions.json').then(function(data) {
     root.sum(d => d.value);
     treemap(root);
 
-    // console.log(root.leaves().reduce)
+    const totalEmissions = root.leaves().reduce((acc, cur) => {
+      if (cur.data && cur.data.value) {
+        return parseFloat( cur.data.value ) + acc;
+      } else {
+        return acc;
+      }
+    }, 0);
+    console.log(`total emissions: ${totalEmissions}`);
+    
 
     var color = d3.scaleOrdinal(d3.schemeCategory10);
     var opacity = d3.scaleLinear();
@@ -48,7 +56,7 @@ var mouseover = function(d) {
   }
   var mousemove = function(d) {
     Tooltip
-      .html( `${d.data.name}: ${d.value}`)
+      .html( `${d.data.name}: ${d.value.toFixed(2)} (${((d.value/totalEmissions) * 100).toFixed(3)}%)`)
       .style("left", (d3.mouse(this)[0]+70) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }
