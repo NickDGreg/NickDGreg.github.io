@@ -2,6 +2,7 @@
 layout: post
 title: "Is what I do anything at all?"
 date: "2019-10-10"
+categories: [personal]
 ---
 
 Am I irrelevant to what I value? I believe so.

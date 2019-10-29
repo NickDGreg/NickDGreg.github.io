@@ -2,6 +2,7 @@
 layout: post
 title: "No Platforms!"
 date: "2019-10-19"
+categories: [climate work]
 ---
 
 When thinking about what I would like to work on to speed up our good-for-climate-technology I often came to the idea of some sort of platform. What if all of us who were interested in climate mitigation and adaption were in one place? What if a site showed all the funded competitions and calls for ideas from big organisations? What if we could easily find others and the *all* the projects anyone anywhere is working on? What if all the problems these projects were facing were openly communicated so that people from different fields could contribute breakthrough ideas?

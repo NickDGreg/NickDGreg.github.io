@@ -2,6 +2,7 @@
 layout: post
 title: "Amusing Nuclear Press Releases"
 date: "2019-10-20"
+categories: [climate work]
 --- 
 
 I didn't expect to find something funny when researching nuclear energy but I did.

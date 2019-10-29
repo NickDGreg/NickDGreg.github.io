@@ -2,6 +2,7 @@
 layout: post
 title: "Do I need more data to find important climate work?"
 date: "2019-10-29"
+categories: [climate work]
 ---
 I've written about how the data on emissions is hard to find, how the visualisations are too high level, and how the data exploration available should be better. I'd like to see an [Atlas of Economic Complexity](http://atlas.cid.harvard.edu/) but for data on which industries and sub-industries are impacting climate change and how. I still think such a tool should exist, it wouldn't be too hard to build a basic version based on the data we can pull from [UNFCCC flexible queries](https://di.unfccc.int/flex_annex1). 
  

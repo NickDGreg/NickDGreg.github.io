@@ -2,6 +2,7 @@
 layout: d3_test
 title: "Emissions visualisation - A first attempt"
 date: "2019-10-28"
+categories: [climate work]
 ---
 I think detailed emissions data is important for us to make decisions. Not just the high level graphs usually in government communication but detailed, explorable data. The raw data is not so easy to find but emailing with the UK's NAEI pointed me to this dataset 
 > Non-fuel emissions in the Environmental Accounts are consistent with the emissions and activity data in the [NAEI pivot tables](https://naei.beis.gov.uk/data/)
