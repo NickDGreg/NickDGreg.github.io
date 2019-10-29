@@ -2,6 +2,7 @@
 layout: post
 title: "What can I do for climate change?"
 date: "2019-10-14"
+categories: [climate work]
 ---
 
 I think climate change is the biggest threat to this planet that I can do something about. I expect to live out my life without being heavily impacted by it, but I still care. David Attenborough is my hero. I love nature and want it all to continue existing. I love life and want future people to be able to love it too.
