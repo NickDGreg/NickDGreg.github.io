@@ -1,0 +1,22 @@
+title: Things I've made
+projects:
+
+- title: 3D image registration
+  videoUrl: https://youtube.com/embed/Yrj_Fc5aZDI
+  description: >
+    The catheter moves through the aorta generating points in 3D space. 
+    Thats the slowly growing red thing. 
+    The algorithm to automatically perform the registration is a particle filter combined with registration. 
+    The pink dots (the particles) show the starting points of the registration, at each step the best starting locations are kept with some randomness thrown in. 
+    Overtime the particles converge to an optimum based on the registration error. 
+    The idea is that this lets image registration occur in real time during a surgery and the particles would let the surgeon cycle through different possible registrations to choose the best one.
+
+- title: Language App
+  videoUrl: https://youtube.com/embed/V2z49gei8jc
+  description: >
+    A demo of the app I built to help me learn german. 
+    I was using many different apps to practice so I just combined them all into one.
+    I listen to podcasts/watch videos and read the transcript at the same time.
+    When I don't know a word I can just tap it to see the oxford dictionary translation.
+    I added an option to save translations or examples from the dictionary and these go straight to the built in flashcards along with the original sentence that I saw the word in. 
+    Handy huh? :)
