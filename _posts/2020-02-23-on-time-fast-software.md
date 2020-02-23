@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "On Time and Lightening Fast"
+title: "On Time and Lightning Fast"
 date: "2020-02-23"
 categories: ["software"]
 --- 
