@@ -2,11 +2,11 @@
 layout: page
 title: About
 ---
-I'd love to see a world with vast supplies of clean energy and production; one where we can go on inventing, growing, and pushing and simultaneously not worry about damaging what allows us to exist. Just a little more harmony you know.
+I'd love to see a world with vast supplies of clean energy and production; one where we can go on inventing, growing, and pushing and simultaneously not worry about damaging what allows us to exist. Just a little more harmony you know. I guess no one would disagree with that, right? But the details are complicated.
 
-I'm currently trying to find out how I can spend my working hours to help make that happen and I'm writing what I find.
+I wonder if there is something I'm suited to that could help make that happen. I wonder if more people doing random, creative, bold work would be a great thing irrespective of the area. What I write is loosely around those topics. 
 
-I am changing my mind as I learn more, but I've decided to leave the old posts even once my thinking has moved on. So if you read something and think: "what a moron", maybe I agree with you.
+I change my mind overtime, but I've decided to leave the old posts even once my thinking has moved on. So if you read something and think: "what a moron", maybe I agree with you.
 
 A factual bio: I'm 25, from England, and living in Zurich. I work in software and machine learning. 
 
