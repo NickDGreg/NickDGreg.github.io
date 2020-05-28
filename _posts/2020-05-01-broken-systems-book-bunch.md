@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Book Bunch for Thinking Clearly and Boldly About Broken Systems"
-date: "2020-02-23"
+date: "2020-05-01"
 categories: ["startups", "systems"]
 --- 
 
