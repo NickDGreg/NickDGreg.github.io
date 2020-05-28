@@ -2,7 +2,7 @@
 layout: post
 title: "Why make green investing hard work?"
 date: "2020-02-16"
-categories: ["sustainability", "life"]
+categories: ["sustainability"]
 ---
 
 I'd like to invest some of my money into producing more green energy while also having the possibility of earning some interest for retired me.
