@@ -4,7 +4,7 @@ title: "Unmagical solutions to open source's finanical issues"
 date: "2020-06-02"
 categories: ["software"]
 ---
-[Gitcoin](https://gitcoin.co/mission) have a /[hackathon challenge](https://gitcoin.co/issue/gitcoinco/web/6726/4389) to "Propose a radical markets idea to be used on gitcoin" that will increase the financial flow and contributions in open source projects. Not restricting myself to the radical markets constraint, I spent some hours thinking about the challenge and failed to see how the current _system_ of open source has much chance of moving towards the type of market Gitcoin imagine.
+[Gitcoin](https://gitcoin.co/mission) have a [hackathon challenge](https://gitcoin.co/issue/gitcoinco/web/6726/4389) to "Propose a radical markets idea to be used on gitcoin" that will increase the financial flow and contributions in open source projects. Not restricting myself to the radical markets constraint, I spent some hours thinking about the challenge and failed to see how the current _system_ of open source has much chance of moving towards the type of market Gitcoin imagine.
 
 I think there are ways to optimise open source without income based on good governance, but the step to actually earning money appears impossible without fundamental changes.
 
