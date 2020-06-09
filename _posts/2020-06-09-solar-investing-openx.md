@@ -14,4 +14,4 @@ The repo is active and has been active for a long time. The code already appears
 
 One confusion I have is their choice to build on the [Stellar](https://www.stellar.org/) blockchain. [They have a thorough analysis](https://gist.github.com/Varunram/b8c0da7b9d553fb0be233be1f99b0d29) of the pros and cons of many blockchains and have a [spreadsheet that seems to show Ethereum as the winner](https://docs.google.com/spreadsheets/d/1H6HwnCwCMZ1yMZqEkVnr2Pw777mmAwhBQHiX1vnC9VM/edit#gid=0) so perhaps they change technology soon.
 
-One very major problem is that the [Bus Factor](https://en.wikipedia.org/wiki/Bus_factor) of the project looks like it's 1. Maybe me? Maybe you? Should make that Bus Factor 2.
+One very major problem is that the [Bus Factor](https://en.wikipedia.org/wiki/Bus_factor) of the project looks like [it's 1](https://github.com/YaleOpenLab/opensolar/graphs/contributors). Maybe me? Maybe you? Should make that Bus Factor 2.
