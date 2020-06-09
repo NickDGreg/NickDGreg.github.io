@@ -20,3 +20,13 @@ Examples:
 - [One Plant Crowd](https://www.oneplanetcrowd.com/en/projects)
 - [Tridos Bank](https://www.triodoscrowdfunding.co.uk/)
 - [GoParity](https://goparity.com/en)
+
+Update:
+
+I asked Sun Exchange about past performance of all projects and whether they plan to offer a invest and forget product. They were helpful and sent me the annual report of a user who owned cells in every project. But for me the report information still left me with many questions about the performance of the projects. 
+
+As a tech company it should be fairly easy to share how you make the financial forcasts and then the have the performance data for the projects easily accessible. 
+
+My general impression of the space is that the desire of people to invest in sustainability means the companies can optimise/rely on feel good factor instead of a strong financial product.
+
+For the invest and forget they reasoned that the direct ownership of the solar cells is why they do not have a fund. That seems fair. They also plan to add an auto-buy function which would make it much lazier for people like me. However, if they aren't invested in the fund and the forcasts and performances aren't easy to access then the auto-buy feature still isn't enough to swing it for me.
