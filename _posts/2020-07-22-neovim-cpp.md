@@ -9,6 +9,7 @@ For some reason, setting up Neovim and adding C++ support took me ages, so I dec
 Install Neovim and setup a package manager. [Neovim tells you how](https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu). [Instructions for installation are also all over the internet](https://medium.com/better-programming/setting-up-neovim-for-web-development-in-2020-d800de3efacd)
 
 In the neovim folder I [create a virtual environment](https://docs.python.org/3/library/venv.html). This way I can more easily track what packages neovim needs and is using and avoid adding packages globally. (You can also do the same for python2).
+
     python3 venv neovim3
     source neovim3/bin/activate
     pip install pynvim
