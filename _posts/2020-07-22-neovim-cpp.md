@@ -16,7 +16,7 @@ In the neovim folder I [create a virtual environment](https://docs.python.org/3/
 
 Then add tell neovim about this virtualenv by adding this line to the `init.vim`
 
-    let g:python3_host_prog='/home/username/.config/nvim/neovim3/bin/python'
+    let g:python3_host_prog='/home/{YOUR_USER}/.config/nvim/neovim3/bin/python'
 
 Now for C++ support and autocompletion. I decided to use [deoplete](https://github.com/Shougo/deoplete/) because I liked the authors [arguments for making it](https://github.com/Shougo/deoplete.nvim/blob/master/doc/deoplete.txt#L1990) and had read a few people describe more standard alternatives as a over the top, un-vim-like even. I decided I wanted to be a purist too; despite knowing nothing about any of it. Also I like [the authors writing style](https://github.com/Shougo/deoplete.nvim/blob/master/doc/deoplete.txt#L1973).
 
