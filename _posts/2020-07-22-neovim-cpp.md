@@ -4,7 +4,7 @@ title: "Quick setup for Neovim and C++"
 date: "2020-07-22"
 categories: ["software"]
 ---
-For some reason, setting up Neovim and adding C++ support took me ages, so I decided to right it down.
+For some reason, setting up Neovim and adding C++ support took me ages, so I decided to write it down.
 
 Install Neovim and setup a package manager. [Neovim tells you how](https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu). [Instructions for installation are also all over the internet](https://medium.com/better-programming/setting-up-neovim-for-web-development-in-2020-d800de3efacd)
 
