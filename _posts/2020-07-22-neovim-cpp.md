@@ -15,16 +15,20 @@ In the neovim folder I [create a virtual environment](https://docs.python.org/3/
     pip install pynvim
 
 Then add tell neovim about this virtualenv by adding this line to the `init.vim`
+
     let g:python3_host_prog='/home/username/.config/nvim/neovim3/bin/python'
+
 Now for C++ support and autocompletion. I decided to use [deoplete](https://github.com/Shougo/deoplete/) because I liked the authors [arguments for making it](https://github.com/Shougo/deoplete.nvim/blob/master/doc/deoplete.txt#L1990) and had read a few people describe more standard alternatives as a over the top, un-vim-like even. I decided I wanted to be a purist too; despite knowing nothing about any of it. Also I like [the authors writing style](https://github.com/Shougo/deoplete.nvim/blob/master/doc/deoplete.txt#L1973).
 
 I found this [jdhao post](https://jdhao.github.io/2020/04/19/nvim_cpp_and_c_completion/) the most detailed on deoplete, C++ and Neovim. But didn't use much of the same steps they did.
 
 Perhaps I will later discover that building from source is necessary for something, but for now I have no idea why you'd prefer that. [See this SO question](https://stackoverflow.com/a/33573422/6859185). Instead, a simple way:
+
     sudo apt install llvm
     sudo apt install clang
 
 With the background done, add `deoplete` and [deoplete-clangx](https://github.com/Shougo/deoplete-clangx) to your plugins
+
       Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
       Plug 'Shougo/deoplete-clangx'
 
@@ -35,5 +39,5 @@ Now close nvim, reopen, and run `:PlugInstall`, then `:checkhealth`. (I forgot :
 At this point when I open a C++ file I see the clangx autocomplete suggestions from deoplete. 
 
 #### Helpful links
-[deoplete-clangx issue for a simple setup](https://github.com/Shougo/deoplete-clangx/issues/8)
-[deoplete debugging](https://github.com/Shougo/deoplete.nvim/blob/master/doc/deoplete.txt#L1543)
+- [deoplete-clangx issue for a simple setup](https://github.com/Shougo/deoplete-clangx/issues/8)
+- [deoplete debugging](https://github.com/Shougo/deoplete.nvim/blob/master/doc/deoplete.txt#L1543)
