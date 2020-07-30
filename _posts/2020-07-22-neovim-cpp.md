@@ -10,7 +10,7 @@ Install Neovim and setup a package manager. [Neovim tells you how](https://githu
 
 In the neovim folder I [create a virtual environment](https://docs.python.org/3/library/venv.html). This way I can more easily track what packages neovim needs and is using and avoid adding packages globally. (You can also do the same for python2).
 
-    python3 venv neovim3
+    python3 -m venv neovim3
     source neovim3/bin/activate
     pip install pynvim
 
