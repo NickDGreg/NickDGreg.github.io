@@ -78,21 +78,26 @@ The `gui.profile` sets up the container to be able to run GUI and audio programs
     name: ros
 
 Create the profiles
+
     ❯ lxc create profile gui
     ❯ lxc create profile ros
     ❯ cat Documents/containers/lxd/gui.profile | lxc profile edit gui
     ❯ cat Documents/containers/lxd/ros.profile | lxc profile edit ros
 
 Create the container 
+
     ❯ lxc launch ubuntu:18.04 --profile default --profile gui --profile ros ros-melodic
 
 Create alias to easily log into the container 
+
     ❯ lxc alias add ubuntu 'exec @ARGS@ --user 1000 --group 1000 --env HOME=/home/ubuntu/ -- /bin/bash --login'
 
 Add a shared disk so that you can edit files on the container or your host machine
+
     ❯ lxc config device add ros-melodic homedir disk source=/home/PATH-TO-FOLDER-YOU-WANT-SHARED/melodic-moveit path=/home/ubuntu/share
 
 Run your container with the alias
+
     ❯ lxc ubuntu ros-melodic
     
 Running `ls` you see pulse audio as well as the `share` folder that is shared with your hostmachine.
