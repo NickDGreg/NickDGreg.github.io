@@ -1,4 +1,10 @@
-### Communicating in the modern world. Can we stop it please? 
+---
+layout: post
+title: "Communicating in the modern world. Can we stop it please?"
+date: "2020-09-14"
+categories: ["humour"]
+---
+
 We've let companies desensitise us to insanity. Normal people even write with company level insanity. You know, you've seen it on LinkedIn. You read a post of someone you went to school with and thought, "what the fuck are you saying? Are you a real person or a caricature?".
 
 As a company somewhere on your website you've got to have an "About us" or "Who we are". And in there you've got to stuff a whole lot of nonsense. The easiest way to do this is list values. Deutsche Bank set a good example by having 31 dense pages describing their code of conduct. The Deutsche Bank who in 2017 was fined for assisting Russian money laundering, who in 2017 agreed a settlement for their key involvement in selling criminal mortgage back securities, who in 2015 was fined for involvement in the Libor rate scam. I'm not anti-capitalism, I just find the way the lie so openly irritating.
