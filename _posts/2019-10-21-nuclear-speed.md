@@ -11,7 +11,7 @@ I found myself confused by two press releases ([1](http://www.world-nuclear-news
 
 I'll spoil they mystery now and tell you the original sources were also both 11 years apart. 
 
-In 2008 the U.K. released a [white paper](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/228903/7386.pdf) on managing radioactive waste safely. On of the things they talked about was finding a site for the geological waste disposal. A single site to handle UK nuclear waste. 
+In 2008 the U.K. released a [white paper](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/228903/7386.pdf) on managing radioactive waste safely. One of the things they talked about was finding a site for the geological waste disposal. A single site to handle UK nuclear waste. 
 
 In 2019 the deputy director for the decommissioning, radioactive material and geological disposal facility sent a [letter](https://cumbriatrust.wordpress.com/2019/07/04/a-letter-from-the-deputy-director-decommissioning-radioactive-material-and-gdf/) which contains the sentence: 
 
